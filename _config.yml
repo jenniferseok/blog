@@ -11,10 +11,10 @@ baseurl: /blog/
 # Website info
 title: Jennifer Seok
 description: Student | Engineer
-cover: assets/images/blog-cover.jpg
+cover: Jennifer Seok.jpg
 logo: Jennifer Seok.jpg
-logo_dark: assets/images/favicon.png
-favicon: assets/images/favicon.png
+logo_dark: Jennifer Seok.png
+favicon: Jennifer Seok.png
 CNAME: #add cname for website to be created
 
 # Social info
