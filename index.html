@@ -1,32 +1,21 @@
-<!--
-  ============================================================
-  MINIMAL PERSONAL SITE — single-file starter
-  ============================================================
-  Edit these sections near the bottom:
-  1. SITE    — name, bio, email/avatar.
-  2. POSTS   — works / projects / notes.
-  3. READING — books, papers, articles.
-
-  Rename this file to index.html when you publish it.
-  ============================================================
--->
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Your Name!</title>
+<title>Jennifer Seok</title>
+
 <style>
   :root{
     --paper:#ffffff;
-    --paper-2:#f7f9fb;
+    --paper-2:#f8fafc;
     --ink:#111111;
     --ink-soft:#333333;
-    --muted:#707070;
+    --muted:#727272;
     --line:#e8e8e8;
-    --accent:#6aaee8;
-    --accent-strong:#3489cf;
-    --accent-soft:#edf6ff;
+    --accent:#75bdf2;
+    --accent-strong:#3d95d3;
+    --accent-soft:#eef8ff;
     --maxw:690px;
   }
 
@@ -43,7 +32,9 @@
   }
 
   *{box-sizing:border-box;}
+
   html{scroll-behavior:smooth;}
+
   body{
     margin:0;
     background:var(--paper);
@@ -55,13 +46,21 @@
     text-rendering:optimizeLegibility;
     transition:background .2s ease,color .2s ease;
   }
+
   a{color:inherit;text-decoration:none;}
   button{font:inherit;}
   ::selection{background:var(--accent-soft);color:var(--ink);}
 
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 24px;
+  }
 
-  header{border-bottom:1px solid var(--line);}
+  header{
+    border-bottom:1px solid var(--line);
+  }
+
   .bar{
     min-height:64px;
     display:flex;
@@ -69,12 +68,14 @@
     justify-content:space-between;
     gap:20px;
   }
+
   .mark{
     font-size:15px;
     font-weight:600;
     letter-spacing:-.01em;
     color:var(--ink);
   }
+
   nav{
     display:flex;
     align-items:center;
@@ -82,7 +83,9 @@
     font-size:14px;
     text-transform:lowercase;
   }
-  nav a,.theme-toggle{
+
+  nav a,
+  .theme-toggle{
     border:0;
     background:transparent;
     padding:0;
@@ -90,17 +93,49 @@
     cursor:pointer;
     transition:color .15s ease;
   }
-  nav a:hover,.theme-toggle:hover,
-  nav a.active{color:var(--accent-strong);}
-  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;font-size:17px;line-height:1;transform:translateY(-1px);}
-  .bulb{display:inline-block;opacity:.78;transition:opacity .15s ease,transform .15s ease;}
-  .theme-toggle:hover .bulb{opacity:1;transform:rotate(-8deg);}
 
-  main{padding-bottom:56px;}
-  .view{display:none;}
-  .view.active{display:block;}
+  nav a:hover,
+  .theme-toggle:hover,
+  nav a.active{
+    color:var(--accent-strong);
+  }
 
-  .hero{padding:58px 0 40px;}
+  .theme-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+    line-height:1;
+    transform:translateY(-1px);
+  }
+
+  .bulb{
+    display:inline-block;
+    opacity:.78;
+    transition:opacity .15s ease,transform .15s ease;
+  }
+
+  .theme-toggle:hover .bulb{
+    opacity:1;
+    transform:rotate(-8deg);
+  }
+
+  main{
+    padding-bottom:56px;
+  }
+
+  .view{
+    display:none;
+  }
+
+  .view.active{
+    display:block;
+  }
+
+  .hero{
+    padding:58px 0 40px;
+  }
+
   .profile{
     width:82px;
     height:82px;
@@ -116,8 +151,18 @@
     font-weight:700;
     font-size:25px;
   }
-  .profile img{width:100%;height:100%;object-fit:cover;display:block;}
-  h1,h2,h3,p{margin-top:0;}
+
+  .profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  h1,h2,h3,p{
+    margin-top:0;
+  }
+
   .hero h1{
     margin-bottom:10px;
     font-size:30px;
@@ -125,12 +170,17 @@
     font-weight:650;
     letter-spacing:-.025em;
   }
-  .hero h1 span{color:var(--accent-strong);}
+
+  .hero h1 span{
+    color:var(--accent-strong);
+  }
+
   .hero p{
     max-width:58ch;
     color:var(--ink-soft);
     font-size:16px;
   }
+
   .simple-links{
     display:flex;
     flex-wrap:wrap;
@@ -138,16 +188,26 @@
     margin-top:18px;
     font-size:14px;
   }
-  .simple-links a,.simple-links button{
+
+  .simple-links a,
+  .simple-links button{
     border:0;
     background:transparent;
     padding:0;
     color:var(--accent-strong);
     cursor:pointer;
   }
-  .simple-links a:hover,.simple-links button:hover{text-decoration:underline;text-underline-offset:3px;}
 
-  .section{padding:4px 0 34px;}
+  .simple-links a:hover,
+  .simple-links button:hover{
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+
+  .section{
+    padding:4px 0 34px;
+  }
+
   .section-title{
     margin:0 0 8px;
     font-size:22px;
@@ -155,6 +215,7 @@
     line-height:1.25;
     letter-spacing:-.02em;
   }
+
   .section-note{
     margin:0 0 22px;
     max-width:56ch;
@@ -162,7 +223,10 @@
     font-size:14.5px;
   }
 
-  .feed{border-top:1px solid var(--line);}
+  .feed{
+    border-top:1px solid var(--line);
+  }
+
   .work-row{
     padding:26px 0 27px;
     border-bottom:1px solid var(--line);
@@ -172,14 +236,27 @@
     gap:24px;
     align-items:start;
   }
-  .work-row:focus{outline:2px solid var(--accent);outline-offset:5px;}
+
+  .work-row:focus{
+    outline:2px solid var(--accent);
+    outline-offset:5px;
+  }
+
   .work-meta{
     margin-bottom:7px;
     color:var(--muted);
     font-size:13px;
   }
-  .work-meta .cat{color:var(--accent-strong);}
-  .work-meta .sep{padding:0 6px;color:var(--muted);}
+
+  .work-meta .cat{
+    color:var(--accent-strong);
+  }
+
+  .work-meta .sep{
+    padding:0 6px;
+    color:var(--muted);
+  }
+
   .work-row h3{
     margin:0 0 8px;
     font-size:20px;
@@ -189,13 +266,19 @@
     color:var(--accent-strong);
     transition:color .15s ease;
   }
-  .work-row:hover h3{text-decoration:underline;text-underline-offset:3px;}
+
+  .work-row:hover h3{
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+
   .work-row p{
     margin:0;
     max-width:62ch;
     color:var(--ink-soft);
     font-size:15.5px;
   }
+
   .work-image{
     width:152px;
     aspect-ratio:4/3;
@@ -205,8 +288,17 @@
     border:1px solid var(--line);
     background:var(--paper-2);
   }
-  .work-image img{width:100%;height:100%;object-fit:cover;display:block;}
-  .work-copy{min-width:0;}
+
+  .work-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .work-copy{
+    min-width:0;
+  }
 
   .filters{
     display:flex;
@@ -215,6 +307,7 @@
     margin:0 0 20px;
     font-size:14px;
   }
+
   .chip{
     border:0;
     background:transparent;
@@ -222,19 +315,27 @@
     color:var(--muted);
     cursor:pointer;
   }
-  .chip:hover{color:var(--accent-strong);}
+
+  .chip:hover{
+    color:var(--accent-strong);
+  }
+
   .chip.active{
     color:var(--accent-strong);
     text-decoration:underline;
     text-underline-offset:4px;
   }
+
   .count-note{
     margin:-6px 0 22px;
     color:var(--muted);
     font-size:13px;
   }
 
-  .reading-list{border-top:1px solid var(--line);}
+  .reading-list{
+    border-top:1px solid var(--line);
+  }
+
   .read-card{
     padding:25px 0 26px;
     border-bottom:1px solid var(--line);
@@ -243,6 +344,7 @@
     gap:18px;
     align-items:start;
   }
+
   .read-cover{
     width:82px;
     aspect-ratio:3/4.15;
@@ -251,13 +353,24 @@
     border:1px solid var(--line);
     background:var(--paper-2);
   }
-  .read-cover img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  .read-cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
   .read-meta{
     margin-bottom:6px;
     color:var(--muted);
     font-size:13px;
   }
-  .read-meta .type{color:var(--accent-strong);}
+
+  .read-meta .type{
+    color:var(--accent-strong);
+  }
+
   .read-card h3{
     margin:0 0 5px;
     font-size:19px;
@@ -265,16 +378,57 @@
     font-weight:650;
     color:var(--accent-strong);
   }
-  .author{color:var(--muted);font-style:italic;}
-  .rating{color:var(--accent-strong);font-size:12px;letter-spacing:1px;margin-left:8px;}
-  .dot-empty{opacity:.28;}
-  .read-card p{margin:7px 0 0;color:var(--ink-soft);font-size:15.5px;}
-  .read-foot{margin-top:8px;font-size:13px;color:var(--muted);}
-  .read-foot a{color:var(--accent-strong);}
-  .read-foot a:hover{text-decoration:underline;text-underline-offset:3px;}
-  .status-dot{width:6px;height:6px;border-radius:50%;background:var(--accent-strong);display:inline-block;margin-right:6px;}
 
-  #article-view{padding:38px 0 72px;}
+  .author{
+    color:var(--muted);
+    font-style:italic;
+  }
+
+  .rating{
+    color:var(--accent-strong);
+    font-size:12px;
+    letter-spacing:1px;
+    margin-left:8px;
+  }
+
+  .dot-empty{
+    opacity:.28;
+  }
+
+  .read-card p{
+    margin:7px 0 0;
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+
+  .read-foot{
+    margin-top:8px;
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  .read-foot a{
+    color:var(--accent-strong);
+  }
+
+  .read-foot a:hover{
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+
+  .status-dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--accent-strong);
+    display:inline-block;
+    margin-right:6px;
+  }
+
+  #article-view{
+    padding:38px 0 72px;
+  }
+
   .back{
     border:0;
     background:transparent;
@@ -284,7 +438,11 @@
     cursor:pointer;
     font-size:14px;
   }
-  .back:hover{color:var(--accent-strong);}
+
+  .back:hover{
+    color:var(--accent-strong);
+  }
+
   .article-head h1{
     margin:8px 0 20px;
     font-size:34px;
@@ -293,6 +451,7 @@
     letter-spacing:-.025em;
     color:var(--accent-strong);
   }
+
   .article-cover{
     display:none;
     width:100%;
@@ -303,9 +462,23 @@
     border:1px solid var(--line);
     background:var(--paper-2);
   }
-  .article-cover img{width:100%;height:100%;object-fit:cover;display:block;}
-  .article-body{max-width:64ch;color:var(--ink-soft);}
-  .article-body p{margin:0 0 18px;}
+
+  .article-cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .article-body{
+    max-width:64ch;
+    color:var(--ink-soft);
+  }
+
+  .article-body p{
+    margin:0 0 18px;
+  }
+
   .article-body h2{
     margin:34px 0 10px;
     color:var(--ink);
@@ -314,25 +487,24 @@
     font-weight:650;
     letter-spacing:-.015em;
   }
-  .article-body pre{
-    background:var(--paper-2);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:16px;
-    overflow:auto;
-    font-size:13.5px;
-    line-height:1.55;
-    color:var(--ink-soft);
-  }
+
   .article-body blockquote{
     margin:0 0 18px;
     padding-left:16px;
     border-left:3px solid var(--accent);
     font-style:italic;
   }
-  .article-body a{color:var(--accent-strong);text-decoration:underline;text-underline-offset:3px;}
 
-  footer{border-top:1px solid var(--line);}
+  .article-body a{
+    color:var(--accent-strong);
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+  }
+
   .foot{
     min-height:88px;
     display:flex;
@@ -343,39 +515,117 @@
     color:var(--muted);
     font-size:13px;
   }
-  .foot-links{display:flex;gap:14px;}
-  .foot a:hover{color:var(--accent-strong);}
 
-  .reveal{opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease;}
-  .reveal.in{opacity:1;transform:none;}
+  .foot-links{
+    display:flex;
+    gap:14px;
+  }
+
+  .foot a:hover{
+    color:var(--accent-strong);
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(8px);
+    transition:opacity .35s ease,transform .35s ease;
+  }
+
+  .reveal.in{
+    opacity:1;
+    transform:none;
+  }
 
   @media (max-width:640px){
     .wrap{padding:0 20px;}
-    .bar{align-items:flex-start;flex-direction:column;padding:18px 0;gap:10px;}
-    nav{gap:13px;font-size:13.5px;}
-    .hero{padding:44px 0 34px;}
-    .hero h1{font-size:28px;}
-    .profile{width:74px;height:74px;border-radius:16px;font-size:22px;}
-    .article-head h1{font-size:29px;}
-    .work-row{grid-template-columns:104px 1fr;gap:16px;padding:24px 0 25px;}
-    .work-image{width:104px;border-radius:9px;}
-    .work-row h3{font-size:18px;margin-bottom:6px;}
-    .work-row p{font-size:14.5px;line-height:1.5;}
-    .work-meta{font-size:12.5px;margin-bottom:5px;}
-    .read-card{grid-template-columns:66px 1fr;gap:14px;}
-    .read-cover{width:66px;border-radius:7px;}
+
+    .bar{
+      align-items:flex-start;
+      flex-direction:column;
+      padding:18px 0;
+      gap:10px;
+    }
+
+    nav{
+      gap:13px;
+      font-size:13.5px;
+    }
+
+    .hero{
+      padding:44px 0 34px;
+    }
+
+    .hero h1{
+      font-size:28px;
+    }
+
+    .profile{
+      width:74px;
+      height:74px;
+      border-radius:16px;
+      font-size:22px;
+    }
+
+    .article-head h1{
+      font-size:29px;
+    }
+
+    .work-row{
+      grid-template-columns:104px 1fr;
+      gap:16px;
+      padding:24px 0 25px;
+    }
+
+    .work-image{
+      width:104px;
+      border-radius:9px;
+    }
+
+    .work-row h3{
+      font-size:18px;
+      margin-bottom:6px;
+    }
+
+    .work-row p{
+      font-size:14.5px;
+      line-height:1.5;
+    }
+
+    .work-meta{
+      font-size:12.5px;
+      margin-bottom:5px;
+    }
+
+    .read-card{
+      grid-template-columns:66px 1fr;
+      gap:14px;
+    }
+
+    .read-cover{
+      width:66px;
+      border-radius:7px;
+    }
   }
 
   @media (prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important;}
-    .reveal{opacity:1;transform:none;}
+    *{
+      animation:none!important;
+      transition:none!important;
+    }
+
+    .reveal{
+      opacity:1;
+      transform:none;
+    }
   }
 </style>
 </head>
+
 <body>
 <header>
   <div class="wrap bar">
-    <a class="mark" href="#" onclick="showView('home');return false;" id="mark-name">Your Name!</a>
+    <a class="mark" href="#" onclick="showView('home');return false;" id="mark-name">Jennifer Seok</a>
+
     <nav aria-label="Site navigation">
       <a href="#" data-nav="home" onclick="showView('home');return false;">home</a>
       <a href="#works" data-nav="works" onclick="showView('works');return false;">works</a>
@@ -390,19 +640,20 @@
 <main class="wrap">
   <section id="home-view" class="view active">
     <div class="hero">
-      <div class="profile" id="avatar">YN</div>
-      <h1>Hi, I'm <span id="hero-name">Your Name!</span></h1>
-      <p id="hero-bio">I build useful things with software and hardware, then write down what I learned.</p>
+      <div class="profile" id="avatar">JS</div>
+      <h1>Hi, I'm <span id="hero-name">Jennifer Seok</span></h1>
+      <p id="hero-bio">I’m a junior at RRHS. I like learning new things, robotics, and playing softball.</p>
+
       <div class="simple-links">
         <button onclick="showView('works')">works</button>
         <button onclick="showView('reading')">reading</button>
-        <a href="mailto:you@example.com" id="hero-email">contact</a>
+        <a href="mailto:danaseok2010@gmail.com" id="hero-email">contact</a>
       </div>
     </div>
 
     <section class="section" aria-labelledby="latest-heading">
       <h2 class="section-title" id="latest-heading">Latest</h2>
-      <p class="section-note">Recent projects and notes.</p>
+      <p class="section-note">One project note and one reading note for now. More can be added later.</p>
       <div class="feed" id="home-feed"></div>
     </section>
   </section>
@@ -410,8 +661,9 @@
   <section id="works-view" class="view">
     <div class="hero" style="padding-bottom:30px;">
       <h1><span>Works</span></h1>
-      <p>Projects, notes, and experiments, sorted by category.</p>
+      <p>Projects, experiments, and things I’m figuring out.</p>
     </div>
+
     <section class="section" aria-labelledby="works-heading">
       <h2 class="section-title" id="works-heading">Categories</h2>
       <div class="filters" id="work-filters"></div>
@@ -423,8 +675,9 @@
   <section id="reading-view" class="view">
     <div class="hero" style="padding-bottom:30px;">
       <h1><span>Reading</span></h1>
-      <p>Books, papers, and articles worth remembering.</p>
+      <p>Books, articles, and notes worth keeping.</p>
     </div>
+
     <section class="section" aria-labelledby="reading-heading">
       <h2 class="section-title" id="reading-heading">Bookshelf</h2>
       <div class="filters" id="read-filters"></div>
@@ -434,10 +687,12 @@
 
   <section id="article-view" class="view">
     <button class="back" onclick="showView(lastListView)">← back</button>
+
     <div class="article-head">
       <div class="work-meta" id="article-meta"></div>
       <h1 id="article-title"></h1>
     </div>
+
     <div class="article-cover" id="article-cover"></div>
     <div class="article-body" id="article-body"></div>
   </section>
@@ -445,190 +700,130 @@
 
 <footer>
   <div class="wrap foot">
-    <span>© <span id="year"></span> <span id="foot-name">Your Name!</span></span>
+    <span>© <span id="year"></span> <span id="foot-name">Jennifer Seok</span></span>
+
     <div class="foot-links">
-      <a href="mailto:you@example.com" id="foot-email">email</a>
-      <a href="https://github.com/yourname" target="_blank" rel="noopener">github</a>
-      <a href="#" target="_blank" rel="noopener">elsewhere</a>
+      <a href="mailto:danaseok2010@gmail.com" id="foot-email">email</a>
+      <a href="https://github.com/jenniferseok" target="_blank" rel="noopener">github</a>
     </div>
   </div>
 </footer>
 
 <script>
 /* ============================================================
-   BUILT-IN PICTURES — replace these later with your own images.
-   Example: image: "assets/my-project.jpg" or cover: "assets/book.jpg"
+   BUILT-IN PLACEHOLDER IMAGES
    ============================================================ */
+
 function escSVG(text){
-  return String(text).replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch]));
+  return String(text).replace(/[&<>"]/g, ch => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    "\"":"&quot;"
+  }[ch]));
 }
 
-function makeWorkImage(title, label, accent = "#8ccaff", pattern = "lines"){
+function makeWorkImage(title, label, accent = "#8ccaff"){
   const t = escSVG(title);
   const l = escSVG(label);
-  const drawings = {
-    chart: `<path d="M86 230 L164 168 L230 194 L316 112 L402 138 L504 76" fill="none" stroke="${accent}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M86 266 H516" stroke="#d9e0e6" stroke-width="2"/><path d="M86 74 V266" stroke="#d9e0e6" stroke-width="2"/>`,
-    wave: `<path d="M70 176 C126 88 178 264 236 176 S348 88 406 176 S500 264 558 176" fill="none" stroke="${accent}" stroke-width="8" stroke-linecap="round"/><path d="M70 224 C126 136 178 312 236 224 S348 136 406 224 S500 312 558 224" fill="none" stroke="#d9e0e6" stroke-width="4" stroke-linecap="round"/>`,
-    notes: `<rect x="86" y="78" width="360" height="176" rx="16" fill="#ffffff" stroke="#d9e0e6"/><path d="M124 122 H390 M124 158 H348 M124 194 H416" stroke="${accent}" stroke-width="7" stroke-linecap="round"/><path d="M470 92 C518 118 530 171 493 210 C462 242 412 234 392 205" fill="none" stroke="#d9e0e6" stroke-width="5" stroke-linecap="round"/>`,
-    board: `<rect x="94" y="78" width="420" height="194" rx="18" fill="#ffffff" stroke="#d9e0e6"/><rect x="172" y="128" width="92" height="70" rx="10" fill="${accent}" opacity=".92"/><circle cx="334" cy="144" r="14" fill="#d9e0e6"/><circle cx="386" cy="144" r="14" fill="#d9e0e6"/><circle cx="438" cy="144" r="14" fill="#d9e0e6"/><path d="M264 164 H334 M348 144 V214 H438 M218 128 V100 H458" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>`
-  };
-  const art = drawings[pattern] || drawings.chart;
+
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-label="${t}">
     <rect width="640" height="340" fill="#f7f9fb"/>
-    <circle cx="548" cy="70" r="82" fill="${accent}" opacity=".12"/>
+    <circle cx="548" cy="70" r="82" fill="${accent}" opacity=".13"/>
     <circle cx="86" cy="300" r="110" fill="${accent}" opacity=".08"/>
-    ${art}
+    <rect x="92" y="82" width="420" height="176" rx="18" fill="#ffffff" stroke="#d9e0e6"/>
+    <path d="M132 128 H348 M132 166 H430 M132 204 H286" stroke="${accent}" stroke-width="8" stroke-linecap="round"/>
+    <path d="M454 116 C504 148 505 210 453 239" fill="none" stroke="#d9e0e6" stroke-width="6" stroke-linecap="round"/>
     <text x="54" y="48" fill="#111111" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700">${t}</text>
     <text x="54" y="314" fill="${accent}" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600">${l}</text>
   </svg>`;
+
   return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
 }
 
 function makeBookCover(title, author, accent = "#8ccaff"){
   const t = escSVG(title);
   const a = escSVG(author || "");
+
+  const words = t
+    .split(" ")
+    .slice(0,4)
+    .map((word,i) => `<tspan x="48" dy="${i===0?0:27}">${escSVG(word)}</tspan>`)
+    .join("");
+
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 332" role="img" aria-label="${t}">
     <rect width="240" height="332" rx="18" fill="#f7f9fb"/>
     <rect x="22" y="22" width="196" height="288" rx="14" fill="#ffffff" stroke="#d9e0e6"/>
     <path d="M48 64 H178 M48 91 H148" stroke="${accent}" stroke-width="8" stroke-linecap="round"/>
     <circle cx="176" cy="236" r="42" fill="${accent}" opacity=".16"/>
-    <path d="M69 242 C98 203 139 203 168 242" fill="none" stroke="${accent}" stroke-width="7" stroke-linecap="round"/>
-    <text x="48" y="142" fill="#111111" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700">
-      ${t.split(' ').slice(0,4).map((word,i)=>`<tspan x="48" dy="${i===0?0:27}">${escSVG(word)}</tspan>`).join('')}
-    </text>
+    <text x="48" y="142" fill="#111111" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700">${words}</text>
     <text x="48" y="292" fill="#707070" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600">${a}</text>
   </svg>`;
+
   return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
 }
 
 /* ============================================================
-   1) SITE — your identity
+   EDIT THESE THREE SECTIONS
    ============================================================ */
+
 const SITE = {
-  name: "Your Name!",
-  initials: "YN",
-  avatar: "", // e.g. "assets/me.jpg" or leave blank for initials
-  email: "you@example.com",
-  bio: "I build useful things with software and hardware, then write down what I learned.",
+  name: "Jennifer Seok",
+  initials: "JS",
+  avatar: "profile.webp",
+  email: "danaseok2010@gmail.com",
+  bio: "I’m a junior at RRHS. I like learning new things, robotics, and playing softball."
 };
 
-/* ============================================================
-   2) POSTS — newest first. Add images with image: "assets/name.jpg"
-   ============================================================ */
 const POSTS = [
   {
-    id: "serial-monitor",
-    title: "A serial monitor that doesn't fight you",
-    date: "2026-04-23",
-    category: "tools",
-    image: makeWorkImage("Serial Monitor", "tools / plots", "#8ccaff", "chart"),
-    excerpt: "Plots, FFTs, and automatic field separation without leaving the terminal.",
+    id: "first-project-note",
+    title: "First project note",
+    date: "2026-06-26",
+    category: "projects",
+    image: makeWorkImage("First Project Note", "projects / learning"),
+    excerpt: "A placeholder for a future robotics, engineering, or coding project.",
     body: `
-      <p>Every embedded project eventually turns into a scrolling wall of serial output. I wanted something quieter and more useful.</p>
-      <h2>What it does</h2>
-      <p>The tool watches the incoming stream, auto-detects delimiters, and splits each line into named fields. Numeric values become live plots; periodic signals get an FFT view.</p>
-      <pre>$ serialscope --port /dev/ttyUSB0 --baud 115200
-[ok] detected 4 fields: t, accel_x, accel_y, accel_z
-[ok] plotting accel_* — press f for FFT</pre>
-      <blockquote>Lesson: the data is never as clean as the protocol doc promised.</blockquote>
-      <p>Source and binaries are on my GitHub. Feedback welcome.</p>
+      <p>This is a starter project post. I’ll replace it with a real project later, once I have something I want to show.</p>
+
+      <h2>What I made</h2>
+      <p>A short explanation of the project will go here: what it does, what tools I used, and why I chose it.</p>
+
+      <h2>What I learned</h2>
+      <p>I can use this section to explain what was hard, what I fixed, and what I would improve next.</p>
     `
-  },
+  }
+];
+
+const READING = [
   {
-    id: "taper-calc",
-    title: "A taper calculator for transmission lines",
-    date: "2026-04-19",
-    category: "rf",
-    image: makeWorkImage("Taper Calculator", "rf / geometry", "#8ccaff", "wave"),
-    excerpt: "Triangular, exponential, and Klopfenstein tapers with S-parameter and DXF export.",
-    body: `
-      <p>Impedance matching with a taper is elegant in theory and annoying in practice. I built a small calculator that does the math and hands you something manufacturable.</p>
-      <h2>Three tapers, one tool</h2>
-      <p>You pick the source and load impedance, length, and taper profile. It returns the geometry, a downloadable DXF, and an S2P file for simulation.</p>
-      <p>The Klopfenstein profile is the interesting one: shortest taper for a given ripple, but gnarly enough that a calculator earns its keep.</p>
-    `
-  },
-  {
-    id: "field-notes",
-    title: "Why I keep field notes in public",
-    date: "2026-03-28",
-    category: "writing",
-    image: makeWorkImage("Field Notes", "writing / process", "#8ccaff", "notes"),
-    excerpt: "Working in the open changes how you work. A short note on why rough drafts count.",
-    body: `
-      <p>There's a version of a personal site that only shows finished, polished work. I find that version a little dishonest — and a lot less useful.</p>
-      <p>Most learning happens in the messy middle: the dead end, the bug that took three days, the assumption that turned out wrong.</p>
-      <h2>The rule I follow</h2>
-      <p>Publish when I would have been glad to read it before I started. That's the whole bar.</p>
-    `
-  },
-  {
-    id: "first-pcb",
-    title: "My first PCB that actually worked",
-    date: "2026-02-11",
-    category: "builds",
-    image: makeWorkImage("First PCB", "builds / hardware", "#8ccaff", "board"),
-    excerpt: "Three revisions, one magic smoke incident, and a hard-won respect for decoupling capacitors.",
-    body: `
-      <p>This is the story of a board that took three spins to get right, and everything I'd tell my past self before ordering the first one.</p>
-      <h2>Revision A: the smoke</h2>
-      <p>I swapped two pins on the regulator footprint. The lesson was not “be careful.” It was “add a current-limited bring-up step before trusting anything.”</p>
-      <h2>Revision C: it lives</h2>
-      <p>By the third spin, the changes were mostly boring: better grounding, more decoupling, test points everywhere. Boring is what working looks like.</p>
-    `
+    title: "Lab Girl",
+    author: "Hope Jahren",
+    type: "book",
+    date: "2026-06-26",
+    cover: makeBookCover("Lab Girl", "Hope Jahren"),
+    status: "reading",
+    note: "A reading placeholder for now — I can replace this with a real note after I finish or get further into the book.",
+    rating: 0
   }
 ];
 
 /* ============================================================
-   3) READING — books, papers, articles
+   SITE LOGIC — you do not need to edit below this
    ============================================================ */
-const READING = [
-  {
-    title: "The Soul of a New Machine",
-    author: "Tracy Kidder",
-    type: "book",
-    date: "2026-05-02",
-    cover: makeBookCover("The Soul of a New Machine", "Tracy Kidder", "#8ccaff"),
-    rating: 5,
-    note: "A great book about what building hardware against a deadline actually feels like.",
-  },
-  {
-    title: "Attention Is All You Need",
-    author: "Vaswani et al.",
-    type: "paper",
-    date: "2026-04-15",
-    cover: makeBookCover("Attention Is All You Need", "Vaswani et al.", "#8ccaff"),
-    rating: 4,
-    note: "Reread properly instead of skimming. The architecture is cleaner than the hype makes it sound.",
-    link: "https://arxiv.org/abs/1706.03762",
-  },
-  {
-    title: "How to do great work",
-    author: "Paul Graham",
-    type: "article",
-    date: "2026-03-30",
-    cover: makeBookCover("How to do great work", "Paul Graham", "#8ccaff"),
-    rating: 4,
-    note: "The part about following curiosity instead of forcing a fake plan stuck with me.",
-    link: "https://paulgraham.com/greatwork.html",
-  },
-  {
-    title: "Designing Data-Intensive Applications",
-    author: "Martin Kleppmann",
-    type: "book",
-    date: "2026-03-10",
-    cover: makeBookCover("Designing Data-Intensive Applications", "Martin Kleppmann", "#8ccaff"),
-    status: "reading",
-    note: "Dense, but the useful kind of dense. Working through it slowly.",
-  }
-];
 
 const VIEWS = ["home","works","reading","article"];
+
 let activeWorkCat = "all";
 let activeReadType = "all";
 let lastListView = "home";
 
-const fmtDate = iso => new Date(iso + "T00:00:00").toLocaleDateString("en-US", {day:"2-digit", month:"short", year:"numeric"});
+const fmtDate = iso => new Date(iso + "T00:00:00").toLocaleDateString("en-US", {
+  day:"2-digit",
+  month:"short",
+  year:"numeric"
+});
+
 const byDate = (a,b) => b.date.localeCompare(a.date);
 
 function wordCount(html = "", extra = ""){
@@ -637,11 +832,13 @@ function wordCount(html = "", extra = ""){
     .replace(/&[a-zA-Z0-9#]+;/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+
   return text ? text.split(" ").length : 0;
 }
 
 function readLabel(post){
   const words = wordCount(post.body || "", post.excerpt || "");
+
   if(words < 500) return "short read";
   if(words < 1200) return "medium read";
   return "long read";
@@ -649,16 +846,23 @@ function readLabel(post){
 
 function applySite(){
   document.title = SITE.name;
+
   document.getElementById("mark-name").textContent = SITE.name;
   document.getElementById("hero-name").textContent = SITE.name;
   document.getElementById("hero-bio").textContent = SITE.bio;
   document.getElementById("foot-name").textContent = SITE.name;
   document.getElementById("year").textContent = new Date().getFullYear();
+
   document.getElementById("hero-email").href = "mailto:" + SITE.email;
   document.getElementById("foot-email").href = "mailto:" + SITE.email;
+
   const avatar = document.getElementById("avatar");
-  if(SITE.avatar){ avatar.innerHTML = `<img src="${SITE.avatar}" alt="${SITE.name}">`; }
-  else{ avatar.textContent = SITE.initials || "··"; }
+
+  if(SITE.avatar){
+    avatar.innerHTML = `<img src="${SITE.avatar}" alt="${SITE.name}">`;
+  }else{
+    avatar.textContent = SITE.initials || "··";
+  }
 }
 
 function imageHTML(p){
@@ -667,25 +871,38 @@ function imageHTML(p){
 }
 
 function workRowHTML(p){
-  return `<article class="work-row reveal" onclick="openPost('${p.id}')" tabindex="0" onkeydown="if(event.key==='Enter')openPost('${p.id}')">
-    ${imageHTML(p)}
-    <div class="work-copy">
-      <div class="work-meta">
-        <span>${fmtDate(p.date)}</span><span class="sep">•</span><span class="cat">${p.category}</span><span class="sep">•</span><span>${readLabel(p)}</span>
+  return `
+    <article class="work-row reveal" onclick="openPost('${p.id}')" tabindex="0" onkeydown="if(event.key==='Enter')openPost('${p.id}')">
+      ${imageHTML(p)}
+      <div class="work-copy">
+        <div class="work-meta">
+          <span>${fmtDate(p.date)}</span>
+          <span class="sep">•</span>
+          <span class="cat">${p.category}</span>
+          <span class="sep">•</span>
+          <span>${readLabel(p)}</span>
+        </div>
+        <h3>${p.title}</h3>
+        <p>${p.excerpt}</p>
       </div>
-      <h3>${p.title}</h3>
-      <p>${p.excerpt}</p>
-    </div>
-  </article>`;
+    </article>
+  `;
 }
 
 function renderHome(){
-  document.getElementById("home-feed").innerHTML = POSTS.slice().sort(byDate).slice(0,4).map(workRowHTML).join("");
+  document.getElementById("home-feed").innerHTML = POSTS
+    .slice()
+    .sort(byDate)
+    .slice(0,1)
+    .map(workRowHTML)
+    .join("");
+
   revealSoon();
 }
 
 function renderWorkFilters(){
   const cats = ["all", ...Array.from(new Set(POSTS.map(p => p.category)))];
+
   document.getElementById("work-filters").innerHTML = cats.map(c =>
     `<button class="chip ${c===activeWorkCat?'active':''}" onclick="setWorkCat('${c}')">${c}</button>`
   ).join("");
@@ -698,22 +915,35 @@ function setWorkCat(cat){
 }
 
 function renderWorks(){
-  const list = POSTS.slice().sort(byDate).filter(p => activeWorkCat === "all" || p.category === activeWorkCat);
+  const list = POSTS
+    .slice()
+    .sort(byDate)
+    .filter(p => activeWorkCat === "all" || p.category === activeWorkCat);
+
   document.getElementById("works-feed").innerHTML = list.map(workRowHTML).join("") || `<p style="color:var(--muted);">Nothing here yet.</p>`;
-  document.getElementById("work-count").textContent = `${list.length} ${list.length===1?'piece':'pieces'} ${activeWorkCat==='all'?'total':'in '+activeWorkCat}`;
+
+  document.getElementById("work-count").textContent =
+    `${list.length} ${list.length===1?'piece':'pieces'} ${activeWorkCat==='all'?'total':'in '+activeWorkCat}`;
+
   revealSoon();
 }
 
 function ratingHTML(n){
   if(!n) return "";
+
   let s = "";
-  for(let i=1;i<=5;i++) s += `<span class="${i<=n?'':'dot-empty'}">●</span>`;
+  for(let i=1;i<=5;i++){
+    s += `<span class="${i<=n?'':'dot-empty'}">●</span>`;
+  }
+
   return `<span class="rating">${s}</span>`;
 }
 
 function renderReadFilters(){
   const types = ["all", ...Array.from(new Set(READING.map(r => r.type)))];
+
   const label = t => t === "all" ? "all" : t + "s";
+
   document.getElementById("read-filters").innerHTML = types.map(t =>
     `<button class="chip ${t===activeReadType?'active':''}" onclick="setReadType('${t}')">${label(t)}</button>`
   ).join("");
@@ -726,34 +956,62 @@ function setReadType(type){
 }
 
 function renderReading(){
-  const list = READING.slice().sort(byDate).filter(r => activeReadType === "all" || r.type === activeReadType);
+  const list = READING
+    .slice()
+    .sort(byDate)
+    .filter(r => activeReadType === "all" || r.type === activeReadType);
+
   document.getElementById("reading-list").innerHTML = list.map(r => {
     const reading = r.status === "reading";
-    return `<article class="read-card reveal">
-      ${r.cover ? `<div class="read-cover"><img src="${r.cover}" alt=""></div>` : `<div class="read-cover" aria-hidden="true"></div>`}
-      <div>
-        <div class="read-meta"><span>${fmtDate(r.date)}</span><span class="work-meta sep">•</span><span class="type">${r.type}</span></div>
-        <h3>${r.title}${ratingHTML(r.rating)}</h3>
-        ${r.author ? `<div class="author">${r.author}</div>` : ""}
-        ${r.note ? `<p>${r.note}</p>` : ""}
-        ${(reading || r.link) ? `<div class="read-foot">
-          ${reading ? `<span><span class="status-dot"></span>currently reading</span>` : ""}
-          ${r.link ? `<a href="${r.link}" target="_blank" rel="noopener">open ↗</a>` : ""}
-        </div>` : ""}
-      </div>
-    </article>`;
+
+    return `
+      <article class="read-card reveal">
+        ${r.cover ? `<div class="read-cover"><img src="${r.cover}" alt=""></div>` : `<div class="read-cover" aria-hidden="true"></div>`}
+        <div>
+          <div class="read-meta">
+            <span>${fmtDate(r.date)}</span>
+            <span class="work-meta sep">•</span>
+            <span class="type">${r.type}</span>
+          </div>
+
+          <h3>${r.title}${ratingHTML(r.rating)}</h3>
+
+          ${r.author ? `<div class="author">${r.author}</div>` : ""}
+          ${r.note ? `<p>${r.note}</p>` : ""}
+
+          ${(reading || r.link) ? `
+            <div class="read-foot">
+              ${reading ? `<span><span class="status-dot"></span>currently reading</span>` : ""}
+              ${r.link ? ` <a href="${r.link}" target="_blank" rel="noopener">open ↗</a>` : ""}
+            </div>
+          ` : ""}
+        </div>
+      </article>
+    `;
   }).join("") || `<p style="color:var(--muted);">Nothing here yet.</p>`;
+
   revealSoon();
 }
 
 function openPost(id){
   const p = POSTS.find(x => x.id === id);
   if(!p) return;
-  const current = document.querySelector('.view.active')?.id || 'home-view';
-  lastListView = current.replace('-view','');
-  document.getElementById("article-meta").innerHTML = `<span>${fmtDate(p.date)}</span><span class="sep">•</span><span class="cat">${p.category}</span><span class="sep">•</span><span>${readLabel(p)}</span>`;
+
+  const current = document.querySelector(".view.active")?.id || "home-view";
+  lastListView = current.replace("-view","");
+
+  document.getElementById("article-meta").innerHTML = `
+    <span>${fmtDate(p.date)}</span>
+    <span class="sep">•</span>
+    <span class="cat">${p.category}</span>
+    <span class="sep">•</span>
+    <span>${readLabel(p)}</span>
+  `;
+
   document.getElementById("article-title").textContent = p.title;
+
   const cover = document.getElementById("article-cover");
+
   if(p.image){
     cover.style.display = "block";
     cover.innerHTML = `<img src="${p.image}" alt="">`;
@@ -761,7 +1019,9 @@ function openPost(id){
     cover.style.display = "none";
     cover.innerHTML = "";
   }
+
   document.getElementById("article-body").innerHTML = p.body || `<p>${p.excerpt}</p>`;
+
   showView("article", false);
   history.replaceState(null,"","#" + p.id);
   window.scrollTo({top:0, behavior:"auto"});
@@ -772,22 +1032,30 @@ function showView(name, updateHash=true){
     const el = document.getElementById(v + "-view");
     if(el) el.classList.toggle("active", v === name);
   });
-  document.querySelectorAll("[data-nav]").forEach(a => a.classList.toggle("active", a.dataset.nav === name));
+
+  document.querySelectorAll("[data-nav]").forEach(a => {
+    a.classList.toggle("active", a.dataset.nav === name);
+  });
+
   if(updateHash){
     const hash = name === "home" ? "#" : "#" + name;
     history.replaceState(null,"",hash);
     window.scrollTo({top:0, behavior:"auto"});
   }
+
   revealSoon();
 }
 
 function setupTheme(){
   const saved = localStorage.getItem("theme");
   const start = saved || "light";
+
   document.documentElement.dataset.theme = start;
   setThemeLabel(start);
+
   document.getElementById("themeBtn").addEventListener("click", () => {
     const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+
     document.documentElement.dataset.theme = next;
     localStorage.setItem("theme", next);
     setThemeLabel(next);
@@ -797,26 +1065,45 @@ function setupTheme(){
 function setThemeLabel(theme){
   const btn = document.getElementById("themeBtn");
   const label = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+
   btn.setAttribute("aria-label", label);
   btn.setAttribute("title", label);
 }
 
 let observer;
+
 function revealSoon(){
   if(observer) observer.disconnect();
+
   observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add("in"); });
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add("in");
+    });
   }, {threshold:.06});
+
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 }
 
 function routeFromHash(){
   const h = location.hash.replace("#","");
-  if(!h){ showView("home", false); return; }
-  if(["works","reading"].includes(h)){ showView(h, false); return; }
+
+  if(!h){
+    showView("home", false);
+    return;
+  }
+
+  if(["works","reading"].includes(h)){
+    showView(h, false);
+    return;
+  }
+
   const post = POSTS.find(p => p.id === h);
-  if(post) openPost(post.id);
-  else showView("home", false);
+
+  if(post){
+    openPost(post.id);
+  }else{
+    showView("home", false);
+  }
 }
 
 applySite();
@@ -827,6 +1114,7 @@ renderReadFilters();
 renderReading();
 setupTheme();
 routeFromHash();
+
 window.addEventListener("hashchange", routeFromHash);
 </script>
 </body>
