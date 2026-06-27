@@ -32,7 +32,6 @@
   }
 
   *{box-sizing:border-box;}
-
   html{scroll-behavior:smooth;}
 
   body{
@@ -40,8 +39,8 @@
     background:var(--paper);
     color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:18px;
-    line-height:1.72;
+    font-size:16px;
+    line-height:1.65;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
     transition:background .2s ease,color .2s ease;
@@ -63,7 +62,7 @@
   }
 
   .bar{
-    min-height:72px;
+    min-height:68px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -71,7 +70,7 @@
   }
 
   .mark{
-    font-size:16.5px;
+    font-size:15px;
     font-weight:650;
     letter-spacing:-.01em;
     color:var(--ink);
@@ -80,8 +79,8 @@
   nav{
     display:flex;
     align-items:center;
-    gap:19px;
-    font-size:15.5px;
+    gap:18px;
+    font-size:14px;
     text-transform:lowercase;
   }
 
@@ -105,7 +104,7 @@
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    font-size:18px;
+    font-size:17px;
     line-height:1;
     transform:translateY(-1px);
   }
@@ -121,21 +120,13 @@
     transform:rotate(-8deg);
   }
 
-  main{
-    padding-bottom:64px;
-  }
-
-  .view{
-    display:none;
-  }
-
-  .view.active{
-    display:block;
-  }
+  main{padding-bottom:64px;}
+  .view{display:none;}
+  .view.active{display:block;}
 
   .hero{
-    margin:58px 0 56px;
-    padding:44px;
+    margin:56px 0 54px;
+    padding:42px;
     background:var(--paper-2);
     border:1px solid var(--line);
     border-radius:26px;
@@ -171,35 +162,32 @@
     display:block;
   }
 
-  h1,h2,h3,p{
-    margin-top:0;
-  }
+  h1,h2,h3,p{margin-top:0;}
 
   .hero h1{
     margin-bottom:12px;
-    font-size:39px;
-    line-height:1.16;
+    font-size:32px;
+    line-height:1.2;
     font-weight:680;
-    letter-spacing:-.03em;
+    letter-spacing:-.02em;
   }
 
-  .hero h1 span{
-    color:var(--accent-strong);
-  }
+  .hero h1 span{color:var(--accent-strong);}
 
   .hero p{
     max-width:60ch;
     margin-bottom:0;
     color:var(--ink-soft);
-    font-size:18px;
+    font-size:16px;
+    line-height:1.65;
   }
 
   .simple-links{
     display:flex;
     flex-wrap:wrap;
-    gap:17px;
-    margin-top:23px;
-    font-size:16px;
+    gap:16px;
+    margin-top:22px;
+    font-size:14px;
   }
 
   .simple-links a,
@@ -217,21 +205,19 @@
     text-underline-offset:3px;
   }
 
-  .section{
-    padding:0 0 44px;
-  }
+  .section{padding:0 0 42px;}
 
   .section-head{
     display:flex;
     justify-content:space-between;
     align-items:baseline;
     gap:18px;
-    margin-bottom:19px;
+    margin-bottom:18px;
   }
 
   .section-title{
     margin:0;
-    font-size:25px;
+    font-size:23px;
     font-weight:670;
     line-height:1.25;
     letter-spacing:-.025em;
@@ -241,13 +227,12 @@
     margin:0;
     max-width:56ch;
     color:var(--muted);
-    font-size:16px;
+    font-size:14.5px;
+    line-height:1.6;
   }
 
   .feed,
-  .reading-list{
-    border-top:1px solid var(--line);
-  }
+  .reading-list{border-top:1px solid var(--line);}
 
   .work-row,
   .read-card{
@@ -258,8 +243,8 @@
   }
 
   .work-row{
-    grid-template-columns:178px 1fr;
-    gap:30px;
+    grid-template-columns:230px 1fr;
+    gap:34px;
     cursor:pointer;
   }
 
@@ -269,10 +254,10 @@
   }
 
   .work-image{
-    width:178px;
+    width:230px;
     aspect-ratio:4/3;
     margin-top:3px;
-    border-radius:14px;
+    border-radius:15px;
     overflow:hidden;
     border:1px solid var(--line);
     background:var(--paper-2);
@@ -285,21 +270,17 @@
     display:block;
   }
 
-  .work-copy{
-    min-width:0;
-  }
+  .work-copy{min-width:0;}
 
   .work-meta,
   .read-meta{
     margin-bottom:8px;
     color:var(--muted);
-    font-size:14.5px;
+    font-size:13px;
   }
 
   .work-meta .cat,
-  .read-meta .type{
-    color:var(--accent-strong);
-  }
+  .read-meta .type{color:var(--accent-strong);}
 
   .sep{
     padding:0 7px;
@@ -310,17 +291,10 @@
   .read-card h3{
     margin:0 0 8px;
     color:var(--accent-strong);
-    line-height:1.3;
+    font-size:19px;
+    line-height:1.35;
     font-weight:670;
     letter-spacing:-.018em;
-  }
-
-  .work-row h3{
-    font-size:23px;
-  }
-
-  .read-card h3{
-    font-size:22px;
   }
 
   .work-row:hover h3{
@@ -333,7 +307,8 @@
     margin:0;
     max-width:66ch;
     color:var(--ink-soft);
-    font-size:17px;
+    font-size:15px;
+    line-height:1.6;
   }
 
   .filters{
@@ -341,7 +316,7 @@
     flex-wrap:wrap;
     gap:18px;
     margin:0 0 20px;
-    font-size:16px;
+    font-size:14px;
   }
 
   .chip{
@@ -352,9 +327,7 @@
     cursor:pointer;
   }
 
-  .chip:hover{
-    color:var(--accent-strong);
-  }
+  .chip:hover{color:var(--accent-strong);}
 
   .chip.active{
     color:var(--accent-strong);
@@ -365,18 +338,18 @@
   .count-note{
     margin:-6px 0 22px;
     color:var(--muted);
-    font-size:14.5px;
+    font-size:13px;
   }
 
   .read-card{
-    grid-template-columns:92px 1fr;
-    gap:22px;
+    grid-template-columns:125px 1fr;
+    gap:26px;
   }
 
   .read-cover{
-    width:92px;
+    width:125px;
     aspect-ratio:3/4.15;
-    border-radius:10px;
+    border-radius:12px;
     overflow:hidden;
     border:1px solid var(--line);
     background:var(--paper-2);
@@ -392,7 +365,7 @@
   .author{
     color:var(--muted);
     font-style:italic;
-    font-size:16.5px;
+    font-size:14.5px;
   }
 
   .rating{
@@ -402,19 +375,15 @@
     margin-left:8px;
   }
 
-  .dot-empty{
-    opacity:.28;
-  }
+  .dot-empty{opacity:.28;}
 
   .read-foot{
     margin-top:9px;
-    font-size:14.5px;
+    font-size:13px;
     color:var(--muted);
   }
 
-  .read-foot a{
-    color:var(--accent-strong);
-  }
+  .read-foot a{color:var(--accent-strong);}
 
   .read-foot a:hover{
     text-decoration:underline;
@@ -430,9 +399,7 @@
     margin-right:6px;
   }
 
-  #article-view{
-    padding:46px 0 78px;
-  }
+  #article-view{padding:46px 0 78px;}
 
   .back{
     border:0;
@@ -441,19 +408,17 @@
     margin:0 0 30px;
     color:var(--muted);
     cursor:pointer;
-    font-size:15.5px;
+    font-size:14px;
   }
 
-  .back:hover{
-    color:var(--accent-strong);
-  }
+  .back:hover{color:var(--accent-strong);}
 
   .article-head h1{
     margin:8px 0 22px;
-    font-size:38px;
-    line-height:1.16;
+    font-size:32px;
+    line-height:1.2;
     font-weight:680;
-    letter-spacing:-.03em;
+    letter-spacing:-.02em;
     color:var(--accent-strong);
   }
 
@@ -482,13 +447,14 @@
 
   .article-body p{
     margin:0 0 19px;
-    font-size:18px;
+    font-size:16px;
+    line-height:1.7;
   }
 
   .article-body h2{
     margin:36px 0 11px;
     color:var(--ink);
-    font-size:24px;
+    font-size:22px;
     line-height:1.3;
     font-weight:670;
     letter-spacing:-.015em;
@@ -507,9 +473,7 @@
     text-underline-offset:3px;
   }
 
-  footer{
-    border-top:1px solid var(--line);
-  }
+  footer{border-top:1px solid var(--line);}
 
   .foot{
     min-height:92px;
@@ -519,7 +483,7 @@
     gap:20px;
     flex-wrap:wrap;
     color:var(--muted);
-    font-size:14.5px;
+    font-size:13px;
   }
 
   .foot-links{
@@ -527,9 +491,7 @@
     gap:16px;
   }
 
-  .foot a:hover{
-    color:var(--accent-strong);
-  }
+  .foot a:hover{color:var(--accent-strong);}
 
   .reveal{
     opacity:0;
@@ -543,13 +505,9 @@
   }
 
   @media (max-width:720px){
-    body{
-      font-size:16.5px;
-    }
+    body{font-size:16px;}
 
-    .wrap{
-      padding:0 22px;
-    }
+    .wrap{padding:0 22px;}
 
     .bar{
       align-items:flex-start;
@@ -581,59 +539,48 @@
       font-size:32px;
     }
 
-    .hero h1{
-      font-size:33px;
-    }
-
-    .hero p{
-      font-size:16.5px;
-    }
+    .hero h1{font-size:30px;}
+    .hero p{font-size:15.5px;}
 
     .work-row{
-      grid-template-columns:120px 1fr;
+      grid-template-columns:145px 1fr;
       gap:18px;
       padding:25px 0;
     }
 
     .work-image{
-      width:120px;
-      border-radius:11px;
-    }
-
-    .work-row h3,
-    .read-card h3{
-      font-size:20px;
-    }
-
-    .work-row p,
-    .read-card p{
-      font-size:15.8px;
-      line-height:1.55;
+      width:145px;
+      border-radius:12px;
     }
 
     .read-card{
-      grid-template-columns:74px 1fr;
-      gap:16px;
+      grid-template-columns:92px 1fr;
+      gap:17px;
     }
 
     .read-cover{
-      width:74px;
-      border-radius:8px;
+      width:92px;
+      border-radius:9px;
     }
 
-    .article-head h1{
-      font-size:31px;
+    .work-row h3,
+    .read-card h3{font-size:18px;}
+
+    .work-row p,
+    .read-card p{
+      font-size:14.5px;
+      line-height:1.55;
     }
+
+    .article-head h1{font-size:30px;}
   }
 
   @media (max-width:480px){
-    .work-row{
-      grid-template-columns:1fr;
-    }
+    .work-row{grid-template-columns:1fr;}
 
     .work-image{
       width:100%;
-      max-width:240px;
+      max-width:260px;
     }
   }
 
@@ -670,30 +617,20 @@
 <main class="wrap">
   <section id="home-view" class="view active">
     <div class="hero">
-      <div class="hero-grid">
-        <div class="profile" id="avatar">JS</div>
+      <div class="profile" id="avatar">JS</div>
+      <h1>Hi, I'm <span id="hero-name">Jenny</span>!</h1>
+      <p id="hero-bio">I’m a junior at RRHS. I like learning new things, robotics, and playing softball.</p>
 
-        <div>
-          <h1>Hi, I'm <span id="hero-name">Jennifer Seok</span></h1>
-          <p id="hero-bio">I’m a junior at RRHS. I like learning new things, robotics, and playing softball.</p>
-
-          <div class="simple-links">
-            <button onclick="showView('works')">works</button>
-            <button onclick="showView('reading')">reading</button>
-            <a href="mailto:danaseok2010@gmail.com" id="hero-email">contact</a>
-          </div>
-        </div>
+      <div class="simple-links">
+        <button onclick="showView('works')">works</button>
+        <button onclick="showView('reading')">reading</button>
+        <a href="mailto:danaseok2010@gmail.com" id="hero-email">contact</a>
       </div>
     </div>
 
     <section class="section" aria-labelledby="latest-heading">
-      <div class="section-head">
-        <div>
-          <h2 class="section-title" id="latest-heading">Latest</h2>
-          <p class="section-note">A small place for projects, reading, and notes.</p>
-        </div>
-      </div>
-
+      <h2 class="section-title" id="latest-heading">Latest</h2>
+      <p class="section-note">One project note and one reading note for now. More can be added later.</p>
       <div class="feed" id="home-feed"></div>
     </section>
 
@@ -710,11 +647,9 @@
   </section>
 
   <section id="works-view" class="view">
-    <div class="hero">
-      <div>
-        <h1><span>Works</span></h1>
-        <p>Projects, experiments, and things I’m figuring out.</p>
-      </div>
+    <div class="hero" style="padding-bottom:30px;">
+      <h1><span>Works</span></h1>
+      <p>Projects, experiments, and things I’m figuring out.</p>
     </div>
 
     <section class="section" aria-labelledby="works-heading">
@@ -726,11 +661,9 @@
   </section>
 
   <section id="reading-view" class="view">
-    <div class="hero">
-      <div>
-        <h1><span>Reading</span></h1>
-        <p>Books, articles, and notes worth keeping.</p>
-      </div>
+    <div class="hero" style="padding-bottom:30px;">
+      <h1><span>Reading</span></h1>
+      <p>Books, articles, and notes worth keeping.</p>
     </div>
 
     <section class="section" aria-labelledby="reading-heading">
@@ -765,6 +698,10 @@
 </footer>
 
 <script>
+/* ============================================================
+   BUILT-IN PLACEHOLDER IMAGES
+   ============================================================ */
+
 function escSVG(text){
   return String(text).replace(/[&<>"]/g, ch => ({
     "&":"&amp;",
@@ -814,6 +751,10 @@ function makeBookCover(title, author, accent = "#8ccaff"){
   return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
 }
 
+/* ============================================================
+   EDIT THESE THREE SECTIONS
+   ============================================================ */
+
 const SITE = {
   name: "Jennifer Seok",
   initials: "JS",
@@ -855,6 +796,10 @@ const READING = [
   }
 ];
 
+/* ============================================================
+   SITE LOGIC — you do not need to edit below this
+   ============================================================ */
+
 const VIEWS = ["home","works","reading","article"];
 
 let activeWorkCat = "all";
@@ -881,6 +826,7 @@ function wordCount(html = "", extra = ""){
 
 function readLabel(post){
   const words = wordCount(post.body || "", post.excerpt || "");
+
   if(words < 500) return "short read";
   if(words < 1200) return "medium read";
   return "long read";
@@ -890,7 +836,7 @@ function applySite(){
   document.title = SITE.name;
 
   document.getElementById("mark-name").textContent = SITE.name;
-  document.getElementById("hero-name").textContent = SITE.name;
+  document.getElementById("hero-name").textContent = "Jenny";
   document.getElementById("hero-bio").textContent = SITE.bio;
   document.getElementById("foot-name").textContent = SITE.name;
   document.getElementById("year").textContent = new Date().getFullYear();
@@ -931,46 +877,6 @@ function workRowHTML(p){
   `;
 }
 
-function ratingHTML(n){
-  if(!n) return "";
-
-  let s = "";
-  for(let i=1;i<=5;i++){
-    s += `<span class="${i<=n?'':'dot-empty'}">●</span>`;
-  }
-
-  return `<span class="rating">${s}</span>`;
-}
-
-function readCardHTML(r){
-  const reading = r.status === "reading";
-
-  return `
-    <article class="read-card reveal">
-      ${r.cover ? `<div class="read-cover"><img src="${r.cover}" alt=""></div>` : `<div class="read-cover" aria-hidden="true"></div>`}
-      <div>
-        <div class="read-meta">
-          <span>${fmtDate(r.date)}</span>
-          <span class="sep">•</span>
-          <span class="type">${r.type}</span>
-        </div>
-
-        <h3>${r.title}${ratingHTML(r.rating)}</h3>
-
-        ${r.author ? `<div class="author">${r.author}</div>` : ""}
-        ${r.note ? `<p>${r.note}</p>` : ""}
-
-        ${(reading || r.link) ? `
-          <div class="read-foot">
-            ${reading ? `<span><span class="status-dot"></span>currently reading</span>` : ""}
-            ${r.link ? ` <a href="${r.link}" target="_blank" rel="noopener">open ↗</a>` : ""}
-          </div>
-        ` : ""}
-      </div>
-    </article>
-  `;
-}
-
 function renderHome(){
   document.getElementById("home-feed").innerHTML = POSTS
     .slice()
@@ -979,12 +885,15 @@ function renderHome(){
     .map(workRowHTML)
     .join("");
 
-  document.getElementById("home-reading").innerHTML = READING
-    .slice()
-    .sort(byDate)
-    .slice(0,1)
-    .map(readCardHTML)
-    .join("");
+  const homeReading = document.getElementById("home-reading");
+  if(homeReading){
+    homeReading.innerHTML = READING
+      .slice()
+      .sort(byDate)
+      .slice(0,1)
+      .map(readCardHTML)
+      .join("");
+  }
 
   revealSoon();
 }
@@ -1017,8 +926,20 @@ function renderWorks(){
   revealSoon();
 }
 
+function ratingHTML(n){
+  if(!n) return "";
+
+  let s = "";
+  for(let i=1;i<=5;i++){
+    s += `<span class="${i<=n?'':'dot-empty'}">●</span>`;
+  }
+
+  return `<span class="rating">${s}</span>`;
+}
+
 function renderReadFilters(){
   const types = ["all", ...Array.from(new Set(READING.map(r => r.type)))];
+
   const label = t => t === "all" ? "all" : t + "s";
 
   document.getElementById("read-filters").innerHTML = types.map(t =>
@@ -1032,13 +953,43 @@ function setReadType(type){
   renderReading();
 }
 
+function readCardHTML(r){
+  const reading = r.status === "reading";
+
+  return `
+    <article class="read-card reveal">
+      ${r.cover ? `<div class="read-cover"><img src="${r.cover}" alt=""></div>` : `<div class="read-cover" aria-hidden="true"></div>`}
+      <div>
+        <div class="read-meta">
+          <span>${fmtDate(r.date)}</span>
+          <span class="sep">•</span>
+          <span class="type">${r.type}</span>
+        </div>
+
+        <h3>${r.title}${ratingHTML(r.rating)}</h3>
+
+        ${r.author ? `<div class="author">${r.author}</div>` : ""}
+        ${r.note ? `<p>${r.note}</p>` : ""}
+
+        ${(reading || r.link) ? `
+          <div class="read-foot">
+            ${reading ? `<span><span class="status-dot"></span>currently reading</span>` : ""}
+            ${r.link ? ` <a href="${r.link}" target="_blank" rel="noopener">open ↗</a>` : ""}
+          </div>
+        ` : ""}
+      </div>
+    </article>
+  `;
+}
+
 function renderReading(){
   const list = READING
     .slice()
     .sort(byDate)
     .filter(r => activeReadType === "all" || r.type === activeReadType);
 
-  document.getElementById("reading-list").innerHTML = list.map(readCardHTML).join("") || `<p style="color:var(--muted);">Nothing here yet.</p>`;
+  document.getElementById("reading-list").innerHTML =
+    list.map(readCardHTML).join("") || `<p style="color:var(--muted);">Nothing here yet.</p>`;
 
   revealSoon();
 }
