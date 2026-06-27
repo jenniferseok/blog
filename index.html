@@ -8,23 +8,23 @@
 <style>
   :root{
     --paper:#ffffff;
-    --paper-2:#f8fafc;
+    --paper-2:#f7f9fb;
     --ink:#111111;
     --ink-soft:#333333;
-    --muted:#727272;
-    --line:#e8e8e8;
-    --accent:#75bdf2;
-    --accent-strong:#3d95d3;
-    --accent-soft:#eef8ff;
-    --maxw:690px;
+    --muted:#747474;
+    --line:#e7e7e7;
+    --accent:#74bdf0;
+    --accent-strong:#348bd0;
+    --accent-soft:#edf8ff;
+    --maxw:860px;
   }
 
   [data-theme="dark"]{
     --paper:#111315;
     --paper-2:#171a1d;
     --ink:#f2f2f2;
-    --ink-soft:#d3d3d3;
-    --muted:#9a9a9a;
+    --ink-soft:#d6d6d6;
+    --muted:#9c9c9c;
     --line:#2b2f34;
     --accent:#8ccaff;
     --accent-strong:#b7ddff;
@@ -40,8 +40,8 @@
     background:var(--paper);
     color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:16px;
-    line-height:1.7;
+    font-size:18px;
+    line-height:1.72;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
     transition:background .2s ease,color .2s ease;
@@ -54,24 +54,25 @@
   .wrap{
     max-width:var(--maxw);
     margin:0 auto;
-    padding:0 24px;
+    padding:0 30px;
   }
 
   header{
     border-bottom:1px solid var(--line);
+    background:var(--paper);
   }
 
   .bar{
-    min-height:64px;
+    min-height:72px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    gap:22px;
   }
 
   .mark{
-    font-size:15px;
-    font-weight:600;
+    font-size:16.5px;
+    font-weight:650;
     letter-spacing:-.01em;
     color:var(--ink);
   }
@@ -79,8 +80,8 @@
   nav{
     display:flex;
     align-items:center;
-    gap:16px;
-    font-size:14px;
+    gap:19px;
+    font-size:15.5px;
     text-transform:lowercase;
   }
 
@@ -104,14 +105,14 @@
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    font-size:17px;
+    font-size:18px;
     line-height:1;
     transform:translateY(-1px);
   }
 
   .bulb{
     display:inline-block;
-    opacity:.78;
+    opacity:.8;
     transition:opacity .15s ease,transform .15s ease;
   }
 
@@ -121,7 +122,7 @@
   }
 
   main{
-    padding-bottom:56px;
+    padding-bottom:64px;
   }
 
   .view{
@@ -132,61 +133,54 @@
     display:block;
   }
 
-.hero{
-  margin:46px 0 44px;
-  padding:34px 34px 32px;
-  background:var(--paper-2);
-  border:1px solid var(--line);
-  border-radius:22px;
-  position:relative;
-}
+  .hero{
+    margin:58px 0 56px;
+    padding:44px;
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-radius:26px;
+  }
 
-.hero::after{
-  content:"";
-  display:block;
-  width:100%;
-  height:1px;
-  margin-top:28px;
-  background-image:linear-gradient(to right, var(--accent) 35%, transparent 0%);
-  background-size:10px 1px;
-  background-repeat:repeat-x;
-  opacity:.65;
-}
+  .hero-grid{
+    display:grid;
+    grid-template-columns:190px 1fr;
+    gap:38px;
+    align-items:center;
+  }
 
-.profile{
-  width:128px;
-  height:128px;
-  border-radius:26px;
-  overflow:hidden;
-  margin-bottom:24px;
-  background:var(--accent-soft);
-  border:1px solid var(--line);
-  color:var(--accent-strong);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-  font-size:32px;
-}
+  .profile{
+    width:190px;
+    height:190px;
+    border-radius:34px;
+    overflow:hidden;
+    background:var(--accent-soft);
+    border:1px solid var(--line);
+    color:var(--accent-strong);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:38px;
+  }
 
-.profile img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
-}
+  .profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+  }
 
   h1,h2,h3,p{
     margin-top:0;
   }
 
   .hero h1{
-    margin-bottom:10px;
-    font-size:30px;
-    line-height:1.2;
-    font-weight:650;
-    letter-spacing:-.025em;
+    margin-bottom:12px;
+    font-size:39px;
+    line-height:1.16;
+    font-weight:680;
+    letter-spacing:-.03em;
   }
 
   .hero h1 span{
@@ -194,17 +188,18 @@
   }
 
   .hero p{
-    max-width:58ch;
+    max-width:60ch;
+    margin-bottom:0;
     color:var(--ink-soft);
-    font-size:16px;
+    font-size:18px;
   }
 
   .simple-links{
     display:flex;
     flex-wrap:wrap;
-    gap:14px;
-    margin-top:18px;
-    font-size:14px;
+    gap:17px;
+    margin-top:23px;
+    font-size:16px;
   }
 
   .simple-links a,
@@ -223,36 +218,49 @@
   }
 
   .section{
-    padding:4px 0 34px;
+    padding:0 0 44px;
+  }
+
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:18px;
+    margin-bottom:19px;
   }
 
   .section-title{
-    margin:0 0 8px;
-    font-size:22px;
-    font-weight:650;
+    margin:0;
+    font-size:25px;
+    font-weight:670;
     line-height:1.25;
-    letter-spacing:-.02em;
+    letter-spacing:-.025em;
   }
 
   .section-note{
-    margin:0 0 22px;
+    margin:0;
     max-width:56ch;
     color:var(--muted);
-    font-size:14.5px;
+    font-size:16px;
   }
 
-  .feed{
+  .feed,
+  .reading-list{
     border-top:1px solid var(--line);
   }
 
-  .work-row{
-    padding:26px 0 27px;
+  .work-row,
+  .read-card{
+    padding:30px 0;
     border-bottom:1px solid var(--line);
-    cursor:pointer;
     display:grid;
-    grid-template-columns:152px 1fr;
-    gap:24px;
     align-items:start;
+  }
+
+  .work-row{
+    grid-template-columns:178px 1fr;
+    gap:30px;
+    cursor:pointer;
   }
 
   .work-row:focus{
@@ -260,48 +268,11 @@
     outline-offset:5px;
   }
 
-  .work-meta{
-    margin-bottom:7px;
-    color:var(--muted);
-    font-size:13px;
-  }
-
-  .work-meta .cat{
-    color:var(--accent-strong);
-  }
-
-  .work-meta .sep{
-    padding:0 6px;
-    color:var(--muted);
-  }
-
-  .work-row h3{
-    margin:0 0 8px;
-    font-size:20px;
-    line-height:1.35;
-    font-weight:650;
-    letter-spacing:-.015em;
-    color:var(--accent-strong);
-    transition:color .15s ease;
-  }
-
-  .work-row:hover h3{
-    text-decoration:underline;
-    text-underline-offset:3px;
-  }
-
-  .work-row p{
-    margin:0;
-    max-width:62ch;
-    color:var(--ink-soft);
-    font-size:15.5px;
-  }
-
   .work-image{
-    width:152px;
+    width:178px;
     aspect-ratio:4/3;
-    margin:2px 0 0;
-    border-radius:10px;
+    margin-top:3px;
+    border-radius:14px;
     overflow:hidden;
     border:1px solid var(--line);
     background:var(--paper-2);
@@ -318,12 +289,59 @@
     min-width:0;
   }
 
+  .work-meta,
+  .read-meta{
+    margin-bottom:8px;
+    color:var(--muted);
+    font-size:14.5px;
+  }
+
+  .work-meta .cat,
+  .read-meta .type{
+    color:var(--accent-strong);
+  }
+
+  .sep{
+    padding:0 7px;
+    color:var(--muted);
+  }
+
+  .work-row h3,
+  .read-card h3{
+    margin:0 0 8px;
+    color:var(--accent-strong);
+    line-height:1.3;
+    font-weight:670;
+    letter-spacing:-.018em;
+  }
+
+  .work-row h3{
+    font-size:23px;
+  }
+
+  .read-card h3{
+    font-size:22px;
+  }
+
+  .work-row:hover h3{
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+
+  .work-row p,
+  .read-card p{
+    margin:0;
+    max-width:66ch;
+    color:var(--ink-soft);
+    font-size:17px;
+  }
+
   .filters{
     display:flex;
     flex-wrap:wrap;
-    gap:16px;
+    gap:18px;
     margin:0 0 20px;
-    font-size:14px;
+    font-size:16px;
   }
 
   .chip{
@@ -347,26 +365,18 @@
   .count-note{
     margin:-6px 0 22px;
     color:var(--muted);
-    font-size:13px;
-  }
-
-  .reading-list{
-    border-top:1px solid var(--line);
+    font-size:14.5px;
   }
 
   .read-card{
-    padding:25px 0 26px;
-    border-bottom:1px solid var(--line);
-    display:grid;
-    grid-template-columns:82px 1fr;
-    gap:18px;
-    align-items:start;
+    grid-template-columns:92px 1fr;
+    gap:22px;
   }
 
   .read-cover{
-    width:82px;
+    width:92px;
     aspect-ratio:3/4.15;
-    border-radius:8px;
+    border-radius:10px;
     overflow:hidden;
     border:1px solid var(--line);
     background:var(--paper-2);
@@ -379,27 +389,10 @@
     display:block;
   }
 
-  .read-meta{
-    margin-bottom:6px;
-    color:var(--muted);
-    font-size:13px;
-  }
-
-  .read-meta .type{
-    color:var(--accent-strong);
-  }
-
-  .read-card h3{
-    margin:0 0 5px;
-    font-size:19px;
-    line-height:1.35;
-    font-weight:650;
-    color:var(--accent-strong);
-  }
-
   .author{
     color:var(--muted);
     font-style:italic;
+    font-size:16.5px;
   }
 
   .rating{
@@ -413,15 +406,9 @@
     opacity:.28;
   }
 
-  .read-card p{
-    margin:7px 0 0;
-    color:var(--ink-soft);
-    font-size:15.5px;
-  }
-
   .read-foot{
-    margin-top:8px;
-    font-size:13px;
+    margin-top:9px;
+    font-size:14.5px;
     color:var(--muted);
   }
 
@@ -444,17 +431,17 @@
   }
 
   #article-view{
-    padding:38px 0 72px;
+    padding:46px 0 78px;
   }
 
   .back{
     border:0;
     background:transparent;
     padding:0;
-    margin:0 0 28px;
+    margin:0 0 30px;
     color:var(--muted);
     cursor:pointer;
-    font-size:14px;
+    font-size:15.5px;
   }
 
   .back:hover{
@@ -462,20 +449,20 @@
   }
 
   .article-head h1{
-    margin:8px 0 20px;
-    font-size:34px;
-    line-height:1.18;
-    font-weight:650;
-    letter-spacing:-.025em;
+    margin:8px 0 22px;
+    font-size:38px;
+    line-height:1.16;
+    font-weight:680;
+    letter-spacing:-.03em;
     color:var(--accent-strong);
   }
 
   .article-cover{
     display:none;
     width:100%;
-    aspect-ratio:16/8;
-    margin:20px 0 32px;
-    border-radius:14px;
+    aspect-ratio:16/7;
+    margin:24px 0 36px;
+    border-radius:18px;
     overflow:hidden;
     border:1px solid var(--line);
     background:var(--paper-2);
@@ -489,20 +476,21 @@
   }
 
   .article-body{
-    max-width:64ch;
+    max-width:68ch;
     color:var(--ink-soft);
   }
 
   .article-body p{
-    margin:0 0 18px;
+    margin:0 0 19px;
+    font-size:18px;
   }
 
   .article-body h2{
-    margin:34px 0 10px;
+    margin:36px 0 11px;
     color:var(--ink);
-    font-size:22px;
+    font-size:24px;
     line-height:1.3;
-    font-weight:650;
+    font-weight:670;
     letter-spacing:-.015em;
   }
 
@@ -524,19 +512,19 @@
   }
 
   .foot{
-    min-height:88px;
+    min-height:92px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:18px;
+    gap:20px;
     flex-wrap:wrap;
     color:var(--muted);
-    font-size:13px;
+    font-size:14.5px;
   }
 
   .foot-links{
     display:flex;
-    gap:14px;
+    gap:16px;
   }
 
   .foot a:hover{
@@ -554,8 +542,14 @@
     transform:none;
   }
 
-  @media (max-width:640px){
-    .wrap{padding:0 20px;}
+  @media (max-width:720px){
+    body{
+      font-size:16.5px;
+    }
+
+    .wrap{
+      padding:0 22px;
+    }
 
     .bar{
       align-items:flex-start;
@@ -565,64 +559,81 @@
     }
 
     nav{
-      gap:13px;
-      font-size:13.5px;
+      gap:14px;
+      font-size:14px;
     }
 
     .hero{
-      margin:32px 0 34px;
-      padding:26px 24px 24px;
+      margin:38px 0 42px;
+      padding:28px;
+      border-radius:22px;
     }
 
-    .hero h1{
-      font-size:28px;
+    .hero-grid{
+      grid-template-columns:1fr;
+      gap:24px;
     }
 
     .profile{
-      width:104px;
-      height:104px;
-      border-radius:22px;
-      font-size:28px;
+      width:150px;
+      height:150px;
+      border-radius:28px;
+      font-size:32px;
     }
 
-    .article-head h1{
-      font-size:29px;
+    .hero h1{
+      font-size:33px;
+    }
+
+    .hero p{
+      font-size:16.5px;
     }
 
     .work-row{
-      grid-template-columns:104px 1fr;
-      gap:16px;
-      padding:24px 0 25px;
+      grid-template-columns:120px 1fr;
+      gap:18px;
+      padding:25px 0;
     }
 
     .work-image{
-      width:104px;
-      border-radius:9px;
+      width:120px;
+      border-radius:11px;
     }
 
-    .work-row h3{
-      font-size:18px;
-      margin-bottom:6px;
+    .work-row h3,
+    .read-card h3{
+      font-size:20px;
     }
 
-    .work-row p{
-      font-size:14.5px;
-      line-height:1.5;
-    }
-
-    .work-meta{
-      font-size:12.5px;
-      margin-bottom:5px;
+    .work-row p,
+    .read-card p{
+      font-size:15.8px;
+      line-height:1.55;
     }
 
     .read-card{
-      grid-template-columns:66px 1fr;
-      gap:14px;
+      grid-template-columns:74px 1fr;
+      gap:16px;
     }
 
     .read-cover{
-      width:66px;
-      border-radius:7px;
+      width:74px;
+      border-radius:8px;
+    }
+
+    .article-head h1{
+      font-size:31px;
+    }
+  }
+
+  @media (max-width:480px){
+    .work-row{
+      grid-template-columns:1fr;
+    }
+
+    .work-image{
+      width:100%;
+      max-width:240px;
     }
   }
 
@@ -659,28 +670,51 @@
 <main class="wrap">
   <section id="home-view" class="view active">
     <div class="hero">
-      <div class="profile" id="avatar">JS</div>
-      <h1>Hi, I'm <span id="hero-name">Jennifer Seok</span></h1>
-      <p id="hero-bio">I’m a junior at RRHS. I like learning new things, robotics, and playing softball.</p>
+      <div class="hero-grid">
+        <div class="profile" id="avatar">JS</div>
 
-      <div class="simple-links">
-        <button onclick="showView('works')">works</button>
-        <button onclick="showView('reading')">reading</button>
-        <a href="mailto:danaseok2010@gmail.com" id="hero-email">contact</a>
+        <div>
+          <h1>Hi, I'm <span id="hero-name">Jennifer Seok</span></h1>
+          <p id="hero-bio">I’m a junior at RRHS. I like learning new things, robotics, and playing softball.</p>
+
+          <div class="simple-links">
+            <button onclick="showView('works')">works</button>
+            <button onclick="showView('reading')">reading</button>
+            <a href="mailto:danaseok2010@gmail.com" id="hero-email">contact</a>
+          </div>
+        </div>
       </div>
     </div>
 
     <section class="section" aria-labelledby="latest-heading">
-      <h2 class="section-title" id="latest-heading">Latest</h2>
-      <p class="section-note">One project note and one reading note for now. More can be added later.</p>
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" id="latest-heading">Latest</h2>
+          <p class="section-note">A small place for projects, reading, and notes.</p>
+        </div>
+      </div>
+
       <div class="feed" id="home-feed"></div>
+    </section>
+
+    <section class="section" aria-labelledby="home-reading-heading">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" id="home-reading-heading">Reading</h2>
+          <p class="section-note">What I’m reading right now.</p>
+        </div>
+      </div>
+
+      <div class="reading-list" id="home-reading"></div>
     </section>
   </section>
 
   <section id="works-view" class="view">
-    <div class="hero" style="padding-bottom:30px;">
-      <h1><span>Works</span></h1>
-      <p>Projects, experiments, and things I’m figuring out.</p>
+    <div class="hero">
+      <div>
+        <h1><span>Works</span></h1>
+        <p>Projects, experiments, and things I’m figuring out.</p>
+      </div>
     </div>
 
     <section class="section" aria-labelledby="works-heading">
@@ -692,9 +726,11 @@
   </section>
 
   <section id="reading-view" class="view">
-    <div class="hero" style="padding-bottom:30px;">
-      <h1><span>Reading</span></h1>
-      <p>Books, articles, and notes worth keeping.</p>
+    <div class="hero">
+      <div>
+        <h1><span>Reading</span></h1>
+        <p>Books, articles, and notes worth keeping.</p>
+      </div>
     </div>
 
     <section class="section" aria-labelledby="reading-heading">
@@ -729,10 +765,6 @@
 </footer>
 
 <script>
-/* ============================================================
-   BUILT-IN PLACEHOLDER IMAGES
-   ============================================================ */
-
 function escSVG(text){
   return String(text).replace(/[&<>"]/g, ch => ({
     "&":"&amp;",
@@ -782,10 +814,6 @@ function makeBookCover(title, author, accent = "#8ccaff"){
   return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
 }
 
-/* ============================================================
-   EDIT THESE THREE SECTIONS
-   ============================================================ */
-
 const SITE = {
   name: "Jennifer Seok",
   initials: "JS",
@@ -827,10 +855,6 @@ const READING = [
   }
 ];
 
-/* ============================================================
-   SITE LOGIC — you do not need to edit below this
-   ============================================================ */
-
 const VIEWS = ["home","works","reading","article"];
 
 let activeWorkCat = "all";
@@ -857,7 +881,6 @@ function wordCount(html = "", extra = ""){
 
 function readLabel(post){
   const words = wordCount(post.body || "", post.excerpt || "");
-
   if(words < 500) return "short read";
   if(words < 1200) return "medium read";
   return "long read";
@@ -908,12 +931,59 @@ function workRowHTML(p){
   `;
 }
 
+function ratingHTML(n){
+  if(!n) return "";
+
+  let s = "";
+  for(let i=1;i<=5;i++){
+    s += `<span class="${i<=n?'':'dot-empty'}">●</span>`;
+  }
+
+  return `<span class="rating">${s}</span>`;
+}
+
+function readCardHTML(r){
+  const reading = r.status === "reading";
+
+  return `
+    <article class="read-card reveal">
+      ${r.cover ? `<div class="read-cover"><img src="${r.cover}" alt=""></div>` : `<div class="read-cover" aria-hidden="true"></div>`}
+      <div>
+        <div class="read-meta">
+          <span>${fmtDate(r.date)}</span>
+          <span class="sep">•</span>
+          <span class="type">${r.type}</span>
+        </div>
+
+        <h3>${r.title}${ratingHTML(r.rating)}</h3>
+
+        ${r.author ? `<div class="author">${r.author}</div>` : ""}
+        ${r.note ? `<p>${r.note}</p>` : ""}
+
+        ${(reading || r.link) ? `
+          <div class="read-foot">
+            ${reading ? `<span><span class="status-dot"></span>currently reading</span>` : ""}
+            ${r.link ? ` <a href="${r.link}" target="_blank" rel="noopener">open ↗</a>` : ""}
+          </div>
+        ` : ""}
+      </div>
+    </article>
+  `;
+}
+
 function renderHome(){
   document.getElementById("home-feed").innerHTML = POSTS
     .slice()
     .sort(byDate)
     .slice(0,1)
     .map(workRowHTML)
+    .join("");
+
+  document.getElementById("home-reading").innerHTML = READING
+    .slice()
+    .sort(byDate)
+    .slice(0,1)
+    .map(readCardHTML)
     .join("");
 
   revealSoon();
@@ -947,20 +1017,8 @@ function renderWorks(){
   revealSoon();
 }
 
-function ratingHTML(n){
-  if(!n) return "";
-
-  let s = "";
-  for(let i=1;i<=5;i++){
-    s += `<span class="${i<=n?'':'dot-empty'}">●</span>`;
-  }
-
-  return `<span class="rating">${s}</span>`;
-}
-
 function renderReadFilters(){
   const types = ["all", ...Array.from(new Set(READING.map(r => r.type)))];
-
   const label = t => t === "all" ? "all" : t + "s";
 
   document.getElementById("read-filters").innerHTML = types.map(t =>
@@ -980,34 +1038,7 @@ function renderReading(){
     .sort(byDate)
     .filter(r => activeReadType === "all" || r.type === activeReadType);
 
-  document.getElementById("reading-list").innerHTML = list.map(r => {
-    const reading = r.status === "reading";
-
-    return `
-      <article class="read-card reveal">
-        ${r.cover ? `<div class="read-cover"><img src="${r.cover}" alt=""></div>` : `<div class="read-cover" aria-hidden="true"></div>`}
-        <div>
-          <div class="read-meta">
-            <span>${fmtDate(r.date)}</span>
-            <span class="work-meta sep">•</span>
-            <span class="type">${r.type}</span>
-          </div>
-
-          <h3>${r.title}${ratingHTML(r.rating)}</h3>
-
-          ${r.author ? `<div class="author">${r.author}</div>` : ""}
-          ${r.note ? `<p>${r.note}</p>` : ""}
-
-          ${(reading || r.link) ? `
-            <div class="read-foot">
-              ${reading ? `<span><span class="status-dot"></span>currently reading</span>` : ""}
-              ${r.link ? ` <a href="${r.link}" target="_blank" rel="noopener">open ↗</a>` : ""}
-            </div>
-          ` : ""}
-        </div>
-      </article>
-    `;
-  }).join("") || `<p style="color:var(--muted);">Nothing here yet.</p>`;
+  document.getElementById("reading-list").innerHTML = list.map(readCardHTML).join("") || `<p style="color:var(--muted);">Nothing here yet.</p>`;
 
   revealSoon();
 }
